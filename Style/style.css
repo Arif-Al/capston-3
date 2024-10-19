@@ -1,12 +1,25 @@
-.btn-hvr:hover {
-color:  #277A3D;
+.btn:hover {
+    color: green !important;
 }
-.card-btns:hover{
+
+.dropdown-item:hover {
+    color: green !important;
+}
+
+.ul-hvr .hvr a:hover {
+    color: green !important;
+}
+
+.btn-hvr:hover {
+    color: #277A3D;
+}
+
+.card-btns:hover {
     background-color: #277A3D;
     color: #fff;
 }
+
 .card-t:hover {
     color: #277A3D;
     cursor: pointer;
 }
- 

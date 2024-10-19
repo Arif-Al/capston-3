@@ -17,31 +17,30 @@
 <body>
 
   <nav class="navbar bg-body-tertiary">
-    <div
-      class="container d-flex justify-content-between align-items-center d-none d-lg-block d-md-block d-md-flex d-lg-flex d-sm-flex">
+    <div class="container d-flex  align-items-center d-none d-lg-block d-md-block d-md-flex d-lg-flex d-sm-flex">
       <a class="navbar-brand">Welcome to GreenMart</a>
-      <div class="btn-group me-5 z-1">
+      <div class="btn-group me-auto">
         <button class="btn dropdown-toggle border-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-          <img src="./images/en.png" class="img-fluid me-2" alt="English"> English
+          <img src="./images/en.png" class="img-fluid me-2" alt="English" width="30px"> English
         </button>
-        <ul class="dropdown-menu z-1">
-          <li><a class="dropdown-item" href="#"><img src="./images/fr.png" class="img-fluid me-2" alt="Français">
-              Français</a></li>
-          <li><a class="dropdown-item" href="#"><img src="./images/ru.png" class="img-fluid me-2" alt="Русский">
-              Русский</a></li>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><img src="./images/fr.png" class="img-fluid me-2" alt="Français"
+                width="28px"> Français</a></li>
+          <li>
+            <hr>
+          </li>
+          <li><a class="dropdown-item" href="#"><img src="./images/ru.png" class="img-fluid me-2" alt="Русский"
+                width="30px"> Русский</a></li>
         </ul>
       </div>
-      
       <ul class="list-unstyled d-flex mb-0 ul-hvr">
         <li class="me-3 hvr"><a href="#" class="text-decoration-none text-black">Order Tracking</a></li>
         <li class="me-3 hvr"><a href="#" class="text-decoration-none text-black">My Wishlist</a></li>
-        <li><a href="#" class="text-decoration-none text-black  hvr">Recent Viewed Products</a></li>
+        <li class="me-3 hvr"><a href="#" class="text-decoration-none text-black hvr">Recent Viewed Products</a></li>
       </ul>
     </div>
   </nav>
-
-
-  <nav class="navbar navbar-expand-lg bg-white sticky-lg-top">
+  <nav class="navbar navbar-expand-lg bg-white sticky-top z-1">
     <div class="container">
       <!-- Logo -->
       <div>
@@ -74,7 +73,7 @@
           </ul>
         </div>
         <!-- Login/Register -->
-         
+
         <a href="./pages/register-page.html">
           <button class="me-5 border-0 bg-white" id="add-to-card">
             <div class="d-flex align-items-center">
@@ -87,13 +86,15 @@
           </button>
         </a>
 
-          <div class="d-flex align-items-center bg-success text-white rounded-3 py-2 px-3 me-5">
+        <div class="d-flex align-items-center bg-success text-white rounded-3 py-2 px-3 me-5">
           <div class="position-relative mt-2">
-          <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">  <iconify-icon class="position-relative" icon="mdi:shopping-cart" width="35" height="30"
-              style="color: white"></iconify-icon></button>
-            <span class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning">0</span>
+            <button class="btn p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+              aria-controls="offcanvasRight"> <iconify-icon class="position-relative" icon="mdi:shopping-cart"
+                width="35" height="30" style="color: white"></iconify-icon></button>
+            <span id="cartQuantityBadge"
+              class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-warning">0</span>
           </div>
-          <h6 class="mb-0 ms-4">Cart <br /><span>$0.00</span></h6>
+          <h6 id="totalPrice" class="mb-0 ms-4">Cart <br /><span>$0.00</span></h6>
         </div>
       </div>
     </div>
@@ -104,13 +105,13 @@
       class="container d-flex justify-content-between align-items-center  d-none d-lg-block d-md-block d-md-flex d-lg-flex">
       <h2 class="opacity-25 fw-normal">|</h2>
       <div class="dropdown">
-      <a href="./index.html">
-        <button class="border-0 dropdown-toggle bg-white text-success" type="button" data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Home
-      </button>
+        <a href="./index.html">
+          <button class="border-0 dropdown-toggle bg-white text-success" type="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Home
+          </button>
 
-      </a>
+        </a>
       </div>
       <h2 class="opacity-25 fw-normal">|</h2>
       <button class="border-0 dropdown-toggle bg-white btn-hvr" type="button" data-bs-toggle="dropdown"
@@ -146,22 +147,26 @@
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <!-- Carousel Indicators -->
     <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
     </div>
-  
+
     <!-- Carousel Inner (Slides) -->
     <div class="carousel-inner">
       <!-- Slide 1 -->
       <div class="carousel-item active position-relative">
         <img src="./images/background-slider-01.jpg" class="d-block w-100 img-fluid" alt="Farm Fresh Vegetables & Food">
-        <div class="container position-absolute top-50 start-50 translate-middle text-white text-end d-none d-lg-block d-md-block my-md-4">
-          <h1 class="display-6 fw-bold ">Farm Fresh <span class="fw-normal">Vegetables & <br>Food</span>100% Organic</h1>
+        <div
+          class="container position-absolute top-50 start-50 translate-middle text-white text-end d-none d-lg-block d-md-block my-md-4">
+          <h1 class="display-6 fw-bold ">Farm Fresh <span class="fw-normal">Vegetables & <br>Food</span>100% Organic
+          </h1>
           <p class="fw-bold">Always Fresh organic products for you.</p>
           <a href="#" class="btn btn-warning mb-md-5">Shop Now</a>
         </div>
       </div>
-      
+
       <!-- Slide 2 -->
       <div class="carousel-item position-relative">
         <img src="./images/background-slider-02.jpg" class="d-block w-100" alt="Fresh Organic Products">
@@ -172,20 +177,22 @@
         </div>
       </div>
     </div>
-  
+
     <!-- Previous Button -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
       <span class="carousel-control-prev-icon " aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    
+
     <!-- Next Button -->
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
-  
+
   <div class="container bg-light bg-gradient text-center fs-5 pt-3  pb-4 fw-semibold">
     <p>Free Shipping On All Orders Over $99.ders Over $99. <span class="text-success"> #staysafecovid19</span></p>
   </div>
@@ -223,7 +230,7 @@
       </div>
       <div class="col-12 col-md-3 col-lg-3 text-center mb-4">
         <img src="./images/banner-02-2.jpg" class="img-fluid" alt="">
-        
+
       </div>
       <div class="col-12 col-md-3 col-lg-3 text-center mb-4">
         <img src="./images/banner-04-2.jpg" class="img-fluid" alt="">
@@ -236,9 +243,9 @@
       <div class="col-12 col-md-3 col-lg-2 mx-3">
         <div class="cards card-1 p-2">
           <div class="card-body">
-            <img src="./images/product-01-291x291.jpg" class="img-fluid card-img-top mb-3 "
-              alt="Image of a carton of eggs" height="100" width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Betterfoods</button>
+            <img src="./images/product-01-291x291.jpg" class="img-fluid card-img-top " alt="Image of a carton of eggs"
+              height="100" width="150" />
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Betterfoods</button>
             <h6 class="card-title my-2 card-t">Zesco Ripe Bananas</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center mb-2">
@@ -252,19 +259,23 @@
               <span class="ms-2 fw-semibold">3</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$120.00</p>
-            <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center" id="add-to-cart"><iconify-icon
-                icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2" >Add to cart</span></button>
+
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Zesco Ripe Bananas"
+              data-price="120.00" data-img="/images/product-01-291x291.jpg" data-made="Betterfoods" quantity="1">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to cart</span>
+            </button>
           </div>
         </div>
       </div>
 
 
       <div class="col-12 col-md-3 col-lg-2 mx-3">
-        <div class="cards p-2 h-100 ">
+        <div class="cards p-2 ">
           <div class="card-body">
-            <img src="./images/product-02-291x291.jpg" class="img-fluid card-img-top mb-3"
-              alt="Image of a carton of eggs" height="100" width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
+            <img src="./images/product-02-291x291.jpg" class="img-fluid card-img-top" alt="Image of a carton of eggs"
+              height="100" width="150" />
+            <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
             <h6 class="card-title my-2 card-t">Orange Peek Zest</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center">
@@ -278,8 +289,11 @@
               <span class="ms-2 fw-semibold">0</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$45.00</p>
-            <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Add to cart</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Orange Peek Zest"
+              data-price="45.00" data-img="./images/product-02-291x291.jpg" data-made="Iceberg foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to cart</span>
+            </button>
           </div>
         </div>
       </div>
@@ -288,9 +302,9 @@
       <div class="col-12 col-md-3 col-lg-2 mx-3">
         <div class="cards p-2 h-100 ">
           <div class="card-body">
-            <img src="./images/product-03-291x291.jpg" class="img-fluid card-img-top mb-3"
-              alt="Image of a carton of eggs" height="100" width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
+            <img src="./images/product-03-291x291.jpg" class="img-fluid card-img-top" alt="Image of a carton of eggs"
+              height="100" width="150" />
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
             <h6 class="card-title my-2 card-t">Tesco Green Seedless</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center">
@@ -304,9 +318,12 @@
               <span class="ms-2 fw-semibold">1</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$40.00</p>
-            <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Read more</span></button>
-          </div>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Tesco Green Seedless"
+              data-price="40.00" data-img="./images/product-03-291x291.jpg" data-made="Fusion Foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to cart</span>
+            </button>
+          </div>`
         </div>
       </div>
 
@@ -314,9 +331,9 @@
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3">
         <div class="cards p-2 h-100">
           <div class="card-body">
-            <img src="./images/product-04-291x291.jpg" class="img-fluid card-img-top mb-3"
-              alt="Image of a carton of eggs" height="100" width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Holy Roots</button>
+            <img src="./images/product-04-291x291.jpg" class="img-fluid card-img-top " alt="Image of a carton of eggs"
+              height="100" width="150" />
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Holy Roots</button>
             <h6 class="card-title my-2 card-t">Waterfi SwimActive</h6>
             <p class="card-text text-secondary">450g</p>
             <div class="d-flex align-items-center">
@@ -330,8 +347,11 @@
               <span class="ms-2 fw-semibold">0</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$100.00</p>
-            <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Add to cart</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Waterfi SwimActive"
+              data-price="100.00" data-img="./images/product-04-291x291.jpg" data-made="Holy Roots">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
@@ -340,9 +360,9 @@
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 ">
         <div class=" h-100 cards p-2">
           <div class="card-body">
-            <img src="./images/product-06-291x291.jpg" class="img-fluid card-img-top mb-3"
-              alt="Image of a carton of eggs" height="100" width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
+            <img src="./images/product-05-291x291.jpg" class="img-fluid card-img-top" alt="Image of a carton of eggs"
+              height="100" width="150" />
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
             <h6 class="card-title my-2 card-t">Tescot Coconut</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center">
@@ -356,8 +376,11 @@
               <span class="ms-2 fw-semibold">0</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$80.00</p>
-            <button class="btn btn-success text-white fw-bold px-4 d-flex align-items-center"><iconify-icon
-                icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Read more</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Iceberg Foods"
+              data-price="80.00" data-img="./images/product-05-291x291.jpg" data-made="Holy Roots">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
@@ -380,143 +403,160 @@
       </div>
     </div>
   </div>
-  <div
-  class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
-  style="background-image: url('./images/bg-home1-01.jpg');"
->
+  <div class="bg-image p-5 shado-strong rounded mb-5" style="background-image: url('./images/bg-home1-01.jpg');">
 
     <div class="container">
       <div class="container d-flex align-items-center justify-content-between ">
-        <h1 class="">Featured Fresh Fruits</h1>
+        <h1 class="text-black">Featured Fresh Fruits</h1>
         <p class="text-success me-4">Shop all</p>
       </div>
-      <div class="row align-items-center justify-content-around bg-white">
-        <!-- Card 1 -->
-        <div class="col-12 col-md-3 col-lg-2 mb-4 ">
-          <div class="cards p-2 h-100">
-            <div class="card-body">
-              <img src="./images/product-01-291x291.jpg" class="img-fluid card-img-top mb-3 "
-                alt="Image of a carton of eggs" height="100" width="150" />
+
+      <div class="container my-4">
+        <div class="row justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-3 col-lg-2 mx-3">
+            <div class="cards card-1 p-2">
+              <div class="card-body">
+                <img src="./images/product-01-291x291.jpg" class="img-fluid card-img-top "
+                  alt="Image of a carton of eggs" height="100" width="150" />
                 <button class="border-secondary rounded-pill border-opacity-25 card-btns">Betterfoods</button>
-              <h6 class="card-title card-t my-2">Zesco Ripe Bananas</h6>
-              <p class="card-text text-secondary">350g</p>
-              <div class="d-flex align-items-center mb-2">
-                <span class="text-warning">
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon class="text-secondary" icon="line-md:star-filled"></iconify-icon>
-                </span>
-                <span class="ms-2 fw-semibold">3</span>
+                <h6 class="card-title my-2 card-t">Zesco Ripe Bananas</h6>
+                <p class="card-text text-secondary">350g</p>
+                <div class="d-flex align-items-center mb-2">
+                  <span class="text-warning">
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon class="text-secondary" icon="line-md:star-filled"></iconify-icon>
+                  </span>
+                  <span class="ms-2 fw-semibold">3</span>
+                </div>
+                <p class="text-danger fs-5 fw-bold">$120.00</p>
+
+                <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Zesco Ripe Bananas"
+                  data-price="120.00" data-img="/images/product-01-291x291.jpg" data-made="Betterfoods">
+                  <iconify-icon icon="bxs:cart"></iconify-icon>
+                  <span class="fw-semibold">Add to cart</span>
+                </button>
               </div>
-              <p class="text-danger fs-5 fw-bold">$120.00</p>
-              <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                  icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Add to cart</span></button>
             </div>
           </div>
-        </div>
 
-
-        <div class="col-12 col-md-3 col-lg-2 mb-4 ">
-          <div class="cards p-2 h-100 ">
-            <div class="card-body">
-              <img src="./images/product-02-291x291.jpg" class="img-fluid card-img-top mb-3"
-                alt="Image of a carton of eggs" height="100" width="150" />
+          <!-- card 2 -->
+          <div class="col-12 col-md-3 col-lg-2 mx-3">
+            <div class="cards p-2 ">
+              <div class="card-body">
+                <img src="./images/product-02-291x291.jpg" class="img-fluid card-img-top"
+                  alt="Image of a carton of eggs" height="100" width="150" />
                 <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
-              <h6 class="card-title card-t my-2">Orange Peek Zest</h6>
-              <p class="card-text text-secondary">350g</p>
-              <div class="d-flex align-items-center mb-2">
-                <span class="text-secondary">
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                </span>
-                <span class="ms-2 fw-semibold">0</span>
+                <h6 class="card-title my-2 card-t">Orange Peek Zest</h6>
+                <p class="card-text text-secondary">350g</p>
+                <div class="d-flex align-items-center">
+                  <span class="text-secondary">
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                  </span>
+                  <span class="ms-2 fw-semibold">0</span>
+                </div>
+                <p class="text-danger fs-5 fw-bold">$45.00</p>
+                <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Orange Peek Zest"
+                  data-price="45.00" data-img="./images/product-02-291x291.jpg" data-made="Iceberg foods">
+                  <iconify-icon icon="bxs:cart"></iconify-icon>
+                  <span class="fw-semibold">Add to cart</span>
+                </button>
               </div>
-              <p class="text-danger fs-5 fw-bold">$45.00</p>
-              <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                  icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Add to cart</span></button>
             </div>
           </div>
-        </div>
 
-        <!-- Card 3 -->
-        <div class="col-12 col-md-3 col-lg-2 mb-4 ">
-          <div class="cards p-2 h-100 ">
-            <div class="card-body">
-              <img src="./images/product-03-291x291.jpg" class="img-fluid card-img-top mb-3"
-                alt="Image of a carton of eggs" height="100" width="150" />
+          <!-- Card 3 -->
+          <div class="col-12 col-md-3 col-lg-2 mx-3">
+            <div class="cards p-2 h-100 ">
+              <div class="card-body">
+                <img src="./images/product-03-291x291.jpg" class="img-fluid card-img-top"
+                  alt="Image of a carton of eggs" height="100" width="150" />
                 <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
-              <h6 class="card-title card-t my-2">Tesco Green Seedless</h6>
-              <p class="card-text text-secondary">350g</p>
-              <div class="d-flex align-items-center mb-2">
-                <span class="text-warning">
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                </span>
-                <span class="ms-2 fw-semibold">1</span>
+                <h6 class="card-title my-2 card-t">Tesco Green Seedless</h6>
+                <p class="card-text text-secondary">350g</p>
+                <div class="d-flex align-items-center">
+                  <span class="text-warning">
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                  </span>
+                  <span class="ms-2 fw-semibold">1</span>
+                </div>
+                <p class="text-danger fs-5 fw-bold">$40.00</p>
+                <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Tesco Green Seedless"
+                  data-price="40.00" data-img="./images/product-03-291x291.jpg" data-made="Fusion Foods">
+                  <iconify-icon icon="bxs:cart"></iconify-icon>
+                  <span class="fw-semibold">Add to card</span>
+                </button>
               </div>
-              <p class="text-danger fs-5 fw-bold">$40.00</p>
-              <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                  icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Read more</span></button>
             </div>
           </div>
-        </div>
 
-        <!-- Card 4 -->
-        <div class="col-12 col-md-3 col-lg-2 mb-4 ">
-          <div class="cards p-2 h-100">
-            <div class="card-body">
-              <img src="./images/product-04-291x291.jpg" class="img-fluid card-img-top mb-3"
-                alt="Image of a carton of eggs" height="100" width="150" />
+          <!-- Card 4 -->
+          <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3">
+            <div class="cards p-2 h-100">
+              <div class="card-body">
+                <img src="./images/product-04-291x291.jpg" class="img-fluid card-img-top"
+                  alt="Image of a carton of eggs" height="100" width="150" />
                 <button class="border-secondary rounded-pill border-opacity-25 card-btns">Holy Roots</button>
-              <span class="card-title card-t my-2">Waterfi SwimActive</span>
-              <p class="card-text text-secondary">450g</p>
-              <div class="d-flex align-items-center mb-2">
-                <span class="text-secondary">
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                </span>
-                <span class="ms-2 fw-semibold">0</span>
+                <h6 class="card-title my-2 card-t">Waterfi SwimActive</h6>
+                <p class="card-text text-secondary">450g</p>
+                <div class="d-flex align-items-center">
+                  <span class="text-secondary">
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                  </span>
+                  <span class="ms-2 fw-semibold">0</span>
+                </div>
+                <p class="text-danger fs-5 fw-bold">$100.00</p>
+                <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Waterfi SwimActive"
+                  data-price="100.00" data-img="./images/product-04-291x291.jpg" data-made="Holy Roots">
+                  <iconify-icon icon="bxs:cart"></iconify-icon>
+                  <span class="fw-semibold">Add to card</span>
+                </button>
               </div>
-              <p class="text-danger fs-5 fw-bold">$100.00</p>
-              <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                  icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Add to cart</span></button>
             </div>
           </div>
-        </div>
 
-        <!-- Card 5 -->
-        <div class="col-12 col-md-2 col-lg-2 mb-4 ">
-          <div class=" h-100 cards p-2">
-            <div class="card-body">
-              <img src="./images/product-06-291x291.jpg" class="img-fluid card-img-top mb-3"
-                alt="Image of a carton of eggs" height="100" width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
-              <span class="card-title card-t my-2">Tescot Coconut</span>
-              <p class="card-text text-secondary">350g</p>
-              <div class="d-flex align-items-center mb-2">
-                <span class="text-secondary">
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                  <iconify-icon icon="line-md:star-filled"></iconify-icon>
-                </span>
-                <span class="ms-2 fw-semibold">0</span>
+          <!-- Card 5 -->
+          <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 ">
+            <div class=" cards p-2">
+              <div class="card-body">
+                <img src="./images/product-06-291x291.jpg" class="img-fluid card-img-top"
+                  alt="Image of a carton of eggs" height="100" width="150" />
+                <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
+                <h6 class="card-title my-2 card-t">Tescot Coconut</h6>
+                <p class="card-text text-secondary">350g</p>
+                <div class="d-flex align-items-center">
+                  <span class="text-secondary">
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                    <iconify-icon icon="line-md:star-filled"></iconify-icon>
+                  </span>
+                  <span class="ms-2 fw-semibold">0</span>
+                </div>
+                <p class="text-danger fs-5 fw-bold">$80.00</p>
+                <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn"
+                  data-name="Waterfi Tescot Coconut" data-price="80.00" data-img="./images/product-06-291x291.jpg"
+                  data-made="Iceberg Foods">
+                  <iconify-icon icon="bxs:cart"></iconify-icon>
+                  <span class="fw-semibold">Add to card</span>
+                </button>
               </div>
-              <p class="text-danger fs-5 fw-bold">$80.00</p>
-              <button class="btn btn-success text-white fw-bold px-3 d-flex align-items-center"><iconify-icon
-                  icon="bxs:cart" width="25"></iconify-icon><span class="fw-semibold ms-2">Add to cart</span></button>
             </div>
           </div>
         </div>
@@ -577,18 +617,16 @@
 
       <img style="width: 250px;" class="img-fluid " src="./images/banner-product.jpg" alt="">
 
-      <!-- Repeat similar structure for other cards -->
+      <!-- card 1 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
-            <img class="img-fluid" src="./images/product-02-291x291.jpg" alt="Image of an orange" height="100"
+            <img class="img-fluid" src="./images/product-01-291x291.jpg" alt="Image of an orange" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Betterfoods</button>
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Betterfoods</button>
             <h6 class="card-title card-t my-2">Orange Peek Zest</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center mb-2">
-              <span class="text-secondary"></span>
-
               <span class="text-warning d-flex align-items-center">
                 <iconify-icon icon="line-md:star-filled"></iconify-icon>
                 <iconify-icon icon="line-md:star-filled"></iconify-icon>
@@ -599,19 +637,22 @@
               <span class="ms-2 ">3</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$120.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="orange Peek Zest"
+              data-price="120.00" data-img="./images/product-01-291x291.jpg" data-made="Betterfoods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 2 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-02-291x291.jpg" alt="Image of a seedless grape" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
+            <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
             <h6 class="card-title card-t my-2">Tesco Green Seedless</h6>
             <p class="card-text text-secondary">350g</p>
             <div class=" mb-2 d-flex align-items-center">
@@ -626,19 +667,22 @@
               </span>
             </div>
             <p class="text-danger fs-5 fw-bold">$45.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Tesco grean seedless"
+              data-price="45.00" data-img="./images/product-02-291x291.jpg" data-made="Iceberg foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Card 4 -->
+      <!-- Card 3 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-03-291x291.jpg" alt="Image of swim active product" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
             <h6 class="card-title card-t my-2">Waterfi SwimActive</h6>
             <p class="card-text text-secondary">450g</p>
             <div class="d-flex align-items-center mb-2">
@@ -655,25 +699,26 @@
               </span>
               </span>
             </div>
-            <p class="text-danger fs-5 fw-bold">$40.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <p class="text-danger fs-5 fw-bold">$40.00</p><button
+              class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Waterfi SwimActive"
+              data-price="40.00" data-img="./images/product-03-291x291.jpg" data-made="Fusion Foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Card 5 -->
+      <!-- Card 4 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-04-291x291.jpg" alt="Image of a coconut" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
             <h6 class="card-title card-t my-2">Tesco Coconut</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center mb-2">
-              <span class="text-secondary"></span>
-
               <span class="text-warning d-flex align-items-center">
                 <iconify-icon class="text-secondary" icon="line-md:star-filled"></iconify-icon>
                 <iconify-icon class="text-secondary" icon="line-md:star-filled"></iconify-icon>
@@ -683,23 +728,27 @@
               </span>
               <span class="ms-2 fw-semibold">0</span>
             </div>
-            <p class="text-danger fs-5 fw-bold">$100.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <p class="text-danger fs-5 fw-bold">$100.00</p><button
+              class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Tescot Coconut"
+              data-price="100.00" data-img="./images/product-04-291x291.jpg" data-made="Iceberg Foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
     </div>
   </div>
+
   <div class="container my-5">
     <div class="row justify-content-center">
-
+      <!-- card 5 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-05-291x291.jpg" alt="Image of a carton of eggs" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25  card-btns">Betterfoods</button>
+            <button class="border-secondary rounded-pill border-opacity-25  card-btns">Betterfoods</button>
             <h6 class="card-title card-t my-2">Zesco Ripe Bananas</h6>
             <p class="card-text text-secondary">450g</p>
             <div class="d-flex align-items-center mb-2">
@@ -713,21 +762,24 @@
               </span>
               <span class="ms-2 fw-semibold">0</span>
             </div>
-            <p class="text-danger fs-5 fw-bold">$80.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <p class="text-danger fs-5 fw-bold">$80.00</p><button
+              class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Zesco Ripe Bananas"
+              data-price="80.00" data-img="./images/product-05-291x291.jpg" data-made="Betterfoods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
 
 
-      <!-- Repeat similar structure for other cards -->
+      <!-- card 6 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-06-291x291.jpg" alt="Image of an orange" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
+            <button class="border-secondary rounded-pill border-opacity-25  card-btns">Iceberg foods</button>
             <h6 class="card-title card-t my-2">Orange Peek Zest</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center mb-2">
@@ -740,20 +792,23 @@
               </span>
               <span class="ms-2 fw-semibold">0</span>
             </div>
-            <p class="text-danger fs-5 fw-bold">$850.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <p class="text-danger fs-5 fw-bold">$85.00</p><button
+              class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="orange Peek Zest"
+              data-price="85.00" data-img="./images/product-06-291x291.jpg" data-made="Iceberg foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Re</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Card 3 -->
+      <!-- Card 7 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
-            <img class="img-fluid" src="./images/product-04-291x291.jpg" alt="Image of a seedless grape" height="100"
+            <img class="img-fluid" src="./images/product-07-291x291.jpg" alt="Image of a seedless grape" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Fusion Foods</button>
             <h6 class="card-title card-t my-2">Tesco Green Seedless</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center mb-2">
@@ -766,20 +821,23 @@
               </span>
               <span class="ms-2 fw-semibold">1</span>
             </div>
-            <p class="text-danger fs-5 fw-bold">$100.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <p class="text-danger fs-5 fw-bold">$100.00</p><button
+              class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="tesco Green Seedless"
+              data-price="100.00" data-img="./images/product-07-291x291.jpg" data-made="Fusion foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Card 4 -->
+      <!-- Card 8 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-08-291x291.jpg" alt="Image of swim active product" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Holy Roots</button>
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Holy Roots</button>
             <h6 class="card-title card-t my-2">Waterfi SwimActive</h6>
             <p class="card-text text-secondary">450g</p>
             <div class="d-flex align-items-center mb-2">
@@ -795,19 +853,22 @@
               <span class="ms-2 fw-semibold">0</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$40.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Waterfi SwimActive"
+              data-price="40.00" data-img="./images/product-08-291x291.jpg" data-made="Holy Roots">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Add to card</span>
+            </button>
           </div>
         </div>
       </div>
 
-      <!-- Card 5 -->
+      <!-- Card 9 -->
       <div class="col-12 col-md-3 col-lg-2 mb-4 mx-3 d-flex justify-content-center align-items-center">
         <div class="cards p-2 h-100">
           <div class="card-body">
             <img class="img-fluid" src="./images/product-09-291x291.jpg" alt="Image of a coconut" height="100"
               width="150" />
-              <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
+            <button class="border-secondary rounded-pill border-opacity-25 card-btns">Iceberg Foods</button>
             <h6 class="card-title card-t my-2">Tesco Coconut</h6>
             <p class="card-text text-secondary">350g</p>
             <div class="d-flex align-items-center mb-2">
@@ -821,8 +882,11 @@
               <span class="ms-2 fw-semibold">1</span>
             </div>
             <p class="text-danger fs-5 fw-bold">$100.00</p>
-            <button class="btn btn-success text-white fw-bold px-4"><iconify-icon icon="bxs:cart"></iconify-icon><span
-                class="fw-semibold">Add to cart</span></button>
+            <button class="btn btn-success text-white fw-bold px-4 add-to-cart-btn" data-name="Tesco Coconut"
+              data-price="100.00" data-img="./images/product-09-291x291.jpg" data-made="Iceberg Foods">
+              <iconify-icon icon="bxs:cart"></iconify-icon>
+              <span class="fw-semibold">Read more</span>
+            </button>
           </div>
         </div>
       </div>
@@ -908,14 +972,18 @@
                 class="nav-link p-0 d-flex align-items-center text-black"><iconify-icon icon="solar:home-bold-duotone"
                   width="20px" style="color: black;" class="me-2"></iconify-icon>70 West Buckingham Ave, NY 11735</a>
             </li>
-            
+
           </ul>
           <ul class="list-unstyled d-flex p-0 my-4">
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="fontisto:facebook" ></iconify-icon></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="lets-icons:insta" class="ms-3"></iconify-icon></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="ri:linkedin-fill" class="ms-3"></iconify-icon></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="mdi:twitter" class="ms-3"></iconify-icon></a></li>
-            </ul>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon
+                  icon="fontisto:facebook"></iconify-icon></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="lets-icons:insta"
+                  class="ms-3"></iconify-icon></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="ri:linkedin-fill"
+                  class="ms-3"></iconify-icon></a></li>
+            <li class="ms-3"><a class="link-body-emphasis" href="#"><iconify-icon icon="mdi:twitter"
+                  class="ms-3"></iconify-icon></a></li>
+          </ul>
         </div>
 
         <div class="col-6 col-md-2 mb-3">
@@ -944,9 +1012,9 @@
             <div class="d-flex flex-column flex-sm-row w-100 gap-2">
               <label for="newsletter1" class="visually-hidden">Email address</label>
               <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-             
+
             </div>
-             <button class="btn btn-success my-3" type="button">Subscribe</button>
+            <button class="btn btn-success my-3" type="button">Subscribe</button>
           </form>
         </div>
       </div>
@@ -955,54 +1023,54 @@
         <p>© 2024 Company, Inc. All rights reserved.</p>
         <ul class="list-unstyled d-flex p-0 my-4">
           <li class="ms-3"><a class="link-body-emphasis" href="#"><img src="./images/payment.png" alt=""></a></li>
-         
+
         </ul>
       </div>
     </footer>
   </div>
 
-  
- 
 
-  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight"
-      aria-labelledby="offcanvasRightLabel">
-      <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasRightLabel">Shopping Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body" id="cartItems">
+      <div id="cartItems"></div>
+      <span id="cartQuantityBadge"></span>
+      <div id="totalPrice"></div>
+      <!-- Cart items will appear here -->
+      <p>Empty!</p>
+    </div>
+    <!-- add to cart section footer -->
+    <div class="offcanvas-footer container mb-5">
+      <hr />
+      <div class="">
+        <strong class="text-black-50">total:</strong>
+        <strong id="offCanvasTotalPrice">$0.00</strong>
       </div>
-      <div class="offcanvas-body" id="cartItems">
-          <div id="cartItems"></div>
-          <span id="cartQuantityBadge"></span>
-          <div id="totalPrice"></div>
-          <!-- Cart items will appear here -->
-          <p>Empty!</p>
-        </div>
-        <!-- add to cart section footer -->
-         <div class="offcanvas-footer container mb-5">
-          <hr />
-          <div class="">
-              <strong class="text-black-50">total:</strong>
-              <strong id="totalPrice">$0.00</strong>
-            </div>
-            <div class="d-flex justify-content-between mt-2">   
-            </div>
-          </div>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        <script src="./script/add-to-cart.js"></script>
+      <div class="d-flex justify-content-between mt-2">
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="./script/add-to-cart.js"></script>
 
 </body>
 
