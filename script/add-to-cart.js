@@ -11,7 +11,7 @@ function updateCartDisplay() {
 
     cart.forEach((item, index) => {
         cartItemsDiv.innerHTML += `
-            <div class="card mb-3 p-3 shadow-sm" onclick="updateQuantity(${index}, 1)">
+            <div class="card mb-3 p-3 shadow-sm">
                 <div class="d-flex justify-content-between align-items-center">
                     <img src="${item.img}" alt="${item.name}" style="width: 90px; height: 90px; object-fit: cover;" class="me-3 rounded">
                     <div class="flex-grow-1">
@@ -22,8 +22,10 @@ function updateCartDisplay() {
                         <button class="btn btn-sm btn-outline-danger me-2" onclick="event.stopPropagation(); updateQuantity(${index}, -1)">-</button>
                         <span class="px-2">${item.quantity}</span>
                         <button class="btn btn-sm btn-outline-success ms-2" onclick="event.stopPropagation(); updateQuantity(${index}, 1)">+</button>
+                       
                     </div>
                 </div>
+                 <button class="btn btn-sm btn-outline-warning ms-2" onclick="event.stopPropagation(); removeItem(${index})">Remove</button>
             </div>
         `;
     });
@@ -51,7 +53,7 @@ document.querySelectorAll('.add-to-cart-btn').forEach(button => {
         }
 
         updateCartDisplay();
-        updateCartQuantityBadge(); // Update badge for total items in cart
+        updateCartQuantityBadge();
     });
 });
 
@@ -63,6 +65,12 @@ function updateQuantity(index, change) {
     }
     updateCartDisplay();
     updateCartQuantityBadge();
+}
+
+function removeItem(index) {
+    cart.splice(index, 1); 
+    updateCartDisplay(); 
+    updateCartQuantityBadge(); 
 }
 
 function updateCartQuantityBadge() {

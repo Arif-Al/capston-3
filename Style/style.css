@@ -23,3 +23,15 @@
     color: #277A3D;
     cursor: pointer;
 }
+
+.first-carts :hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+
+.second-carts :hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
